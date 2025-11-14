@@ -1307,3 +1307,134 @@ body.dark-theme {
     opacity: 1;
     visibility: visible;
 }
+
+
+/*==================== NEW MODAL STYLES ====================*/
+
+
+/* Make modal scrollable for all new fields */
+
+.order-modal__content {
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 2.5rem 1.5rem;
+}
+
+@media screen and (min-width: 767px) {
+    .order-modal__content {
+        padding: 2.5rem;
+    }
+}
+
+
+/* Product Details */
+
+.order-modal__product-details {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    margin-bottom: var(--mb-1-5);
+    padding-bottom: var(--mb-1-5);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.order-modal__product-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+    border-radius: .25rem;
+}
+
+.order-modal__product-info {
+    flex: 1;
+}
+
+.order-modal__product-name {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-bold);
+    color: var(--title-color);
+    margin-bottom: var(--mb-0-5);
+}
+
+.order-modal__product-price {
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+    display: block;
+}
+
+
+/* Radio Button Groups */
+
+.order-modal__options-group {
+    margin-top: var(--mb-0-5);
+    margin-bottom: var(--mb-1);
+}
+
+.order-modal__options-title {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-0-75);
+}
+
+.order-modal__radio-group {
+    display: grid;
+    row-gap: .5rem;
+    font-size: var(--normal-font-size);
+}
+
+.order-modal__radio-group label {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    cursor: pointer;
+}
+
+
+/* Price Breakdown */
+
+.order-modal__price-breakdown {
+    padding: var(--mb-1) 0;
+    margin-bottom: var(--mb-1);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.order-modal__price-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--normal-font-size);
+}
+
+.order-modal__price-line.total {
+    font-size: var(--h3-font-size);
+    color: var(--title-color);
+    margin-top: .5rem;
+}
+
+
+/* Bkash Details */
+
+.bkash-details {
+    padding: 1rem;
+    background-color: var(--container-color);
+    border: 1px solid var(--border-color);
+    border-radius: .25rem;
+    margin-top: var(--mb-0-5);
+    margin-bottom: var(--mb-1-5);
+}
+
+.bkash-instructions {
+    font-size: var(--small-font-size);
+    line-height: 1.5;
+    margin-bottom: var(--mb-1);
+    text-align: center;
+}
+
+
+/* Utility Class */
+
+.hidden {
+    display: none !important;
+}

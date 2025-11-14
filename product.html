@@ -183,15 +183,66 @@
                 <i class='bx bx-x order-modal__close' id="modal-close-btn"></i>
 
                 <h2 class="order-modal__title">Complete Your Order</h2>
-                <p class="order-modal__product" id="modal-product-name">Product: [Product Name]</p>
+
+                <div class="order-modal__product-details">
+                    <img src="" alt="Product Image" class="order-modal__product-img" id="modal-product-img">
+                    <div class="order-modal__product-info">
+                        <h3 class="order-modal__product-name" id="modal-product-name">Product: [Name]</h3>
+                        <span class="order-modal__product-price" id="modal-product-base-price">Price: ...</span>
+                    </div>
+                </div>
 
                 <form action="" class="order-modal__form" id="order-form">
                     <input type="text" id="form-name" placeholder="Enter your full name" class="newsletter__input" required>
-
                     <input type="tel" id="form-mobile" placeholder="Enter your mobile number" class="newsletter__input" required>
                     <input type="text" id="form-location" placeholder="Enter your location/address" class="newsletter__input" required>
-
                     <input type="text" id="form-size" placeholder="Enter size (e.g., L, XL, or 54, 56)" class="newsletter__input" required>
+
+                    <div class="order-modal__options-group">
+                        <h4 class="order-modal__options-title">Delivery Location</h4>
+                        <div class="order-modal__radio-group">
+                            <label>
+                                <input type="radio" name="delivery" id="delivery-inside" value="inside" required> Inside
+                                Dhaka (+৳80)
+                            </label>
+                            <label>
+                                <input type="radio" name="delivery" id="delivery-outside" value="outside"> Outside Dhaka
+                                (+৳140)
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="order-modal__price-breakdown">
+                        <div class="order-modal__price-line">
+                            <span>Delivery Charge:</span>
+                            <span id="modal-delivery-charge">৳0</span>
+                        </div>
+                        <div class="order-modal__price-line total">
+                            <strong>Total Price:</strong>
+                            <strong id="modal-total-price">...</strong>
+                        </div>
+                    </div>
+
+                    <div class="order-modal__options-group">
+                        <h4 class="order-modal__options-title">Payment Method</h4>
+                        <div class="order-modal__radio-group">
+                            <label>
+                                <input type="radio" name="payment" id="payment-cod" value="cod" required> Cash on
+                                Delivery
+                            </label>
+                            <label>
+                                <input type="radio" name="payment" id="payment-bkash" value="bkash"> Bkash
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="bkash-details" id="bkash-details">
+                        <p class="bkash-instructions">
+                            Please send <strong id="bkash-total">...</strong> to our Bkash Account:
+                            <strong>01319722155</strong> (Send Money) and enter the Transaction ID below.
+                        </p>
+                        <input type="text" id="form-bkash-trxid" placeholder="Enter Bkash Transaction ID" class="newsletter__input">
+                    </div>
 
                     <input type="hidden" id="modal-product-id">
                     <input type="hidden" id="modal-action">
